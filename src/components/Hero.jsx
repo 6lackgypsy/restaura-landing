@@ -13,7 +13,7 @@ const Hero = () => {
           loop
           playsInline
           poster={hero}
-          className="h-f§ w-full object-cover"
+          className="h-full w-full object-cover"
         ></video>
       </div>
       <div className="absolute inset-0 -z-5 bg-gradient-to-b from-transparent from-70% to-black"></div>
