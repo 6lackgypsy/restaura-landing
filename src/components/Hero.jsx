@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import video from "../assets/hero.mp4"
 import hero from "../assets/hero.jpeg"
 import logo from "../assets/logo.png"
@@ -18,7 +19,14 @@ const Hero = () => {
       </div>
       <div className="absolute inset-0 -z-5 bg-gradient-to-b from-transparent from-70% to-black"></div>
       <div className="relative z-5 h-screen flex flex-col justify-end pb-20">
-        <img src={logo} alt="Restaura" className="w-full p-4" />
+        <motion.img
+          src={logo}
+          alt="Restaura"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="w-full p-4"
+        />
         <p className="p-4 text-lg tracking-tighter text-white">Paris</p>
       </div>
     </section>
